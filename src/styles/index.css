@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: hsl(0, 0%, 16%);
+  --black: hsla(0, 0%, 7%, 1);
+  --lite-black: hsla(0, 0%, 14%, 1);
+  --white: hsla(0, 0%, 100%, 0.87);
+  --lite-white: hsla(0, 0%, 100%, 0.5);
+  --shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+  --border-radius: 15px;
+  --border-radius-small: 4.69px;
+}
+
+body {
+  font-family: "SF Pro Display";
+}
