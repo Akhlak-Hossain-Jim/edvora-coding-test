@@ -21,8 +21,8 @@ function Filter({ productData }) {
         <option value="">Products</option>
         {ProductData &&
           React.Children.toArray(
-            ProductData.map((data) => (
-              <option value={data.product_name}>{data.product_name}</option>
+            [...new Set(ProductData.map((e) => e.product_name))].map((data) => (
+              <option value={data}>{data}</option>
             ))
           )}
       </select>
@@ -71,9 +71,9 @@ function Filter({ productData }) {
                 ].map((data) => <option value={data}>{data}</option>)
               )
             : React.Children.toArray(
-                ProductData.map((data) => (
-                  <option value={data.address.city}>{data.address.city}</option>
-                ))
+                [...new Set(ProductData.map((e) => e.address.city))].map(
+                  (data) => <option value={data}>{data}</option>
+                )
               ))}
       </select>
     </Container>
